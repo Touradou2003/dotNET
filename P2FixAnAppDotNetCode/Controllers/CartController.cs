@@ -39,8 +39,7 @@ namespace P2FixAnAppDotNetCode.Controllers
 
         public RedirectToActionResult RemoveFromCart(int id)
         {
-            Product product = _productService.GetAllProducts()
-                .FirstOrDefault(p => p.Id == id);
+            Product product = _productService.GetProductById(id);
 
             if (product != null)
             {
